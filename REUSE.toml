@@ -1,0 +1,154 @@
+version = 1
+
+# ============================
+# FVAE-LoRA (this repository)
+# ============================
+
+[[annotations]]
+path = [
+    ".gitignore",
+    "REUSE.toml",
+    "env.yaml",
+    "requirements.txt",
+    "*.py",
+    "*.md",
+    "scripts/**"
+]
+SPDX-FileCopyrightText = "2026 Idiap Research Institute <contact@idiap.ch>"
+SPDX-License-Identifier = "MIT"
+
+
+# ============================
+# Vendored HuggingFace PEFT
+# ============================
+#
+# Default rule for everything under peft/ (covers files without explicit headers
+# like Dockerfiles, Makefiles, YAML, notebooks, etc). More specific overrides
+# below provide per-subtree/per-file copyright strings.
+
+[[annotations]]
+path = "peft/**"
+SPDX-FileCopyrightText = "2023 The HuggingFace Team"
+SPDX-License-Identifier = "Apache-2.0"
+
+
+# ----------------------------
+# PEFT documentation
+# ----------------------------
+
+[[annotations]]
+path = "peft/docs/**"
+SPDX-FileCopyrightText = "2023 The HuggingFace Team. All rights reserved."
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = [
+    "peft/docs/source/developer_guides/checkpoint.md",
+    "peft/docs/source/developer_guides/model_merging.md",
+    "peft/docs/source/package_reference/fourierft.md",
+    "peft/docs/source/package_reference/layernorm_tuning.md",
+    "peft/docs/source/package_reference/merge_utils.md",
+    "peft/docs/source/package_reference/poly.md",
+    "peft/docs/source/package_reference/vblora.md",
+    "peft/docs/source/package_reference/vera.md",
+    "peft/docs/source/task_guides/ia3.md",
+    "peft/docs/source/task_guides/lora_based_methods.md",
+    "peft/docs/source/task_guides/prompt_based_methods.md"
+]
+SPDX-FileCopyrightText = "2024 The HuggingFace Team. All rights reserved."
+SPDX-License-Identifier = "Apache-2.0"
+
+
+# ----------------------------
+# PEFT source / tests / examples / scripts (Python)
+# ----------------------------
+
+[[annotations]]
+path = [
+    "peft/src/**.py",
+    "peft/tests/**.py",
+    "peft/examples/**.py",
+    "peft/scripts/**.py"
+]
+SPDX-FileCopyrightText = "2023-present the HuggingFace Inc. team."
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = [
+    "peft/examples/ephemeral_gpu_offloading/load_with_dora.py",
+    "peft/examples/hra_dreambooth/train_dreambooth.py",
+    "peft/examples/olora_finetuning/olora_finetuning.py",
+    "peft/src/peft/optimizers/__init__.py",
+    "peft/src/peft/optimizers/loraplus.py",
+    "peft/src/peft/tuners/fourierft/__init__.py",
+    "peft/src/peft/tuners/fourierft/config.py",
+    "peft/src/peft/tuners/fourierft/layer.py",
+    "peft/src/peft/tuners/fourierft/model.py",
+    "peft/src/peft/tuners/hra/__init__.py",
+    "peft/src/peft/tuners/hra/config.py",
+    "peft/src/peft/tuners/hra/layer.py",
+    "peft/src/peft/tuners/hra/model.py",
+    "peft/src/peft/tuners/ln_tuning/__init__.py",
+    "peft/src/peft/tuners/ln_tuning/config.py",
+    "peft/src/peft/tuners/ln_tuning/layer.py",
+    "peft/src/peft/tuners/ln_tuning/model.py",
+    "peft/src/peft/tuners/lora/aqlm.py",
+    "peft/src/peft/tuners/lora/awq.py",
+    "peft/src/peft/tuners/lora/dora.py",
+    "peft/src/peft/tuners/lora/eetq.py",
+    "peft/src/peft/tuners/lora/hqq.py",
+    "peft/src/peft/tuners/vblora/__init__.py",
+    "peft/src/peft/tuners/vblora/config.py",
+    "peft/src/peft/tuners/vblora/layer.py",
+    "peft/src/peft/tuners/vblora/model.py",
+    "peft/src/peft/tuners/xlora/layer.py",
+    "peft/src/peft/utils/merge_utils.py",
+    "peft/tests/bnb/test_bnb_regression.py",
+    "peft/tests/test_boft.py",
+    "peft/tests/test_helpers.py",
+    "peft/tests/test_loraplus.py",
+    "peft/tests/test_torch_compile.py",
+    "peft/tests/test_vblora.py",
+    "peft/tests/test_vera.py",
+    "peft/tests/test_vision_models.py"
+]
+SPDX-FileCopyrightText = "2024-present the HuggingFace Inc. team."
+SPDX-License-Identifier = "Apache-2.0"
+
+
+# ----------------------------
+# PEFT special cases (non-Apache snippets / third-party contributions)
+# ----------------------------
+
+[[annotations]]
+path = "peft/scripts/stale.py"
+SPDX-FileCopyrightText = "2023 The HuggingFace Team, the AllenNLP library authors. All rights reserved."
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = "peft/src/peft/tuners/_buffer_dict.py"
+SPDX-FileCopyrightText = "Meta Platforms, Inc. and affiliates."
+SPDX-License-Identifier = "MIT"
+
+[[annotations]]
+path = "peft/src/peft/tuners/lora/layer.py"
+SPDX-FileCopyrightText = "2023-present the HuggingFace Inc. team.; Microsoft Corporation"
+SPDX-License-Identifier = "Apache-2.0 AND MIT"
+
+[[annotations]]
+path = [
+    "peft/src/peft/tuners/boft/fbd/fbd_cuda.cpp",
+    "peft/src/peft/tuners/boft/fbd/fbd_cuda_kernel.cu"
+]
+SPDX-FileCopyrightText = "2023 Yao Feng"
+SPDX-License-Identifier = "Apache-2.0"
+
+
+# ----------------------------
+# FVAE-LoRA additions inside PEFT (MIT)
+# ----------------------------
+
+[[annotations]]
+path = "peft/src/peft/tuners/fvae_peft/**"
+SPDX-FileCopyrightText = "2026 Idiap Research Institute <contact@idiap.ch>"
+SPDX-License-Identifier = "MIT"
